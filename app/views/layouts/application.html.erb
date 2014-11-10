@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foroieee!</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-default navbar-static-top" role="navigation">
+
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-06">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="#">Foro IEEE!</a>
+  </div>
+  <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-04" style="padding-right: 10px">
+    <% if usuario_signed_in? %>
+        <%= link_to 'Nuevo Post', new_post_path, :class=>"btn btn-default navbar-btn btn-sm", :type=>"button"%> 
+        <%= link_to 'Cerrar Sesion', destroy_usuario_session_path, method: :delete, :class=>"btn btn-danger navbar-btn btn-sm", :type=>"button"%>
+
+  <% else %>
+         <%= link_to 'Registrarse' , new_usuario_registration_path,class: "btn btn-default navbar-btn btn-sm", type: "button"%>
+         <%= link_to 'Iniciar Sesion' , new_usuario_session_path, class: "btn btn-default navbar-btn btn-sm", type: "button" %>
+  <% end %>
+      
+
+  
+
+</nav>
+
+
+  
+ 
+
+<%= yield %>
+
+
+
+
+<footer >
+
+
+</footer>
+
+</body>
+</html>
