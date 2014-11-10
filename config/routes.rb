@@ -58,4 +58,6 @@ get 'usuarios/sign_out(:usuario)' => 'posts#index'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
 end

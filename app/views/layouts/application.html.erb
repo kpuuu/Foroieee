@@ -21,8 +21,11 @@
         <%= link_to 'Cerrar Sesion', destroy_usuario_session_path, method: :delete, :class=>"btn btn-danger navbar-btn btn-sm", :type=>"button"%>
 
   <% else %>
-         <%= link_to 'Registrarse' , new_usuario_registration_path,class: "btn btn-default navbar-btn btn-sm", type: "button"%>
-         <%= link_to 'Iniciar Sesion' , new_usuario_session_path, class: "btn btn-default navbar-btn btn-sm", type: "button" %>
+
+         <%= link_to 'Registrarse' , new_usuario_registration_path,class: "btn btn-default navbar-btn btn-sm", type: "button", "data-toggle" => "modal", "data-target" => "#loginModal" %>
+        
+
+         <%= link_to 'Iniciar Sesion' , new_usuario_session_path, class: "btn btn-default navbar-btn btn-sm", type: "button" , "data-toggle" => "modal", "data-target" => "#loginModal"%>
   <% end %>
       
 
@@ -30,6 +33,21 @@
 
 </nav>
 
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+
+            <div class="modal-body">
+                <!-- The form is placed inside the body of modal -->
+              
+            </div>
+        </div>
+    </div>
+</div>
 
   
  
